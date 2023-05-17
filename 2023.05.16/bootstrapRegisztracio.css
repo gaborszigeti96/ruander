@@ -1,0 +1,41 @@
+body {
+    background-image: linear-gradient(to left, black, dodgerblue, black);
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    width: 500px;
+    padding: 20px;
+    margin: 0px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+}
+
+.btn-primary {
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px black;
+}
+
+
+table {
+    width: 40%;
+    margin: 100px auto;
+}
+
+td,
+th {
+    border: 1px solid black;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
