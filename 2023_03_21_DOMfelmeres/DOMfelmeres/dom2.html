@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom2</title>
+    <style>
+        #kirajzolandoElem {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="x">X kordináta:</label>
+    <input type="number" value="100" id="x">
+    <label for="y">Y kordináta:</label>
+    <input type="number" value="100" id="y"><br>
+
+    <button style="float: left;" id="kirajzol">Kirajzol</button><br><br>
+    <div id="kirajzolandoElem"></div>
+
+    <script>
+        kirajzol.addEventListener("click", Kirajzolo);
+
+        function Kirajzolo() {
+            let xErtek = document.querySelector("#x").value
+            let yErtek = document.querySelector("#y").value
+            document.getElementById("kirajzolandoElem").style.height = xErtek + "px";
+            document.getElementById("kirajzolandoElem").style.width = yErtek + "px";
+
+
+        }
+    </script>
+</body>
+
+</html>

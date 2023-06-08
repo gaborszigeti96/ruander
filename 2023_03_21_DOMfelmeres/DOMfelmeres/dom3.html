@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 3</title>
+    <style>
+        #hiding {
+            width: 100px;
+            height: 100px;
+            animation-name: fadeIn;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="hidingButton" type="button">Bujócska</button>
+    <img src="hidingCat.jpg" alt="cica" id="hiding">
+
+    <script>
+
+        hidingButton.addEventListener("click", cicaKirajzol);
+        function cicaKirajzol() {
+            let latszikE = document.getElementById("hiding").style.animationName
+            if (latszikE != "fadeOut") {
+                document.getElementById("hiding").style.animationName = "fadeOut";
+
+            }
+            else {
+                document.getElementById("hiding").style.animationName = "fadeIn";
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
