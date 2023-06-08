@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szinvalaszto oldal</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+
+        }
+
+        #keveroFelulet {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 250px;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px black;
+        }
+
+        #rgb {
+            font-size: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="keveroFelulet">
+
+        <label for="redSet">Red</label>
+        <input type="range" min="0" max="255" value="0" id="redSet">
+
+        <label for="greenSet">Green</label>
+        <input type="range" min="0" max="255" value="0" id="greenSet">
+
+        <label for="blueSett">Blue</label>
+        <input type="range" min="0" max="255" value="0" id="blueSett">
+    </div>
+
+    <div id="rgb">rgb(0,0,0)</div>
+</body>
+
+</html>

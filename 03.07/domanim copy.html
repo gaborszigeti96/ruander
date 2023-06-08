@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animáció DOM-mal</title>
+    <style>
+        #megjelenitendoElem {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+            display: none;
+        }
+
+        @keyframes example {
+            from {
+                display: none;
+            }
+
+            to {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="Elem megjelenítése" id="allapotValtoztato">
+    <div id="megjelenitendoElem"></div>
+
+
+    <script>
+        allapotValtoztato.addEventListener("click", allapotValtoztatas);
+
+        function allapotValtoztatas() {
+            let elem = document.querySelector("#megjelenitendoElem");
+            let gomb = document.querySelector("#allapotValtoztato");
+            let allapot = elem.style.display;
+            if (allapot != "block") {
+                elem.style.display = "block";
+                gomb.value = "Elem elrejtése";
+            }
+            else {
+                elem.style.display = "none";
+                gomb.value = "Elem megjelenítése";
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

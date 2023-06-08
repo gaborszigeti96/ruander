@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javaScriptFajlNeve.js"></script>
+</head>
+
+<body>
+
+    <p id="eredmeny">
+        valami szöveg
+
+    </p>
+    <input type="button" value="kattintas" onclick="SzeretemA()" />
+    <hr>
+    <input type="text" id="jelszomezo" value="JavaScript a legjobb">
+    <input type="button" value="Elrejtés" onclick="Lathatosag()" />
+
+    <script>
+        function SzeretemA() {
+
+
+            document.getElementById("eredmeny").innerHTML = "Szeretem a programozást";
+        }
+        function Lathatosag() {
+            let allapot = jelszomezo.getAttribute("type");
+            if (allapot == "text") {
+                jelszomezo.setAttribute("type", "password");
+            }
+            else {
+                jelszomezo.setAttribute("type", "text");
+            }
+        }
+
+
+        /*
+                    getEelementById("azonosítóNeve");
+                    getElementByClassName("osztályNeve");
+                    getElementByName("ElemNeve");
+                    getElementByTagName("TagNeve");
+                
+                
+                    document.querySelector("#AzonosítóNeve");
+                    document.querySelectorAll(".OsztályNeve");
+                    documetn.querySelectorAll("TagNeve")
+                
+                    Tulajdonság módosítás
+                
+                    elemNeve.getAttribute("stlye");
+                    elemNeve.getAttribute("mit", "mire");
+                
+                    Tartalom módsoítás
+                
+                
+                    */
+
+
+    </script>
+</body>
+
+</html>

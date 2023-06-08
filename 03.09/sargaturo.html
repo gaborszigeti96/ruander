@@ -96,15 +96,15 @@
 
         function foValtozas() {
             let foSzam = document.querySelector("#fo").value
-            if (foSzam > 1) {
-
-                document.getElementById("tej").innerHTML = ((foSzam * 0.2) + " l tej");
-                document.getElementById("tojas").innerHTML = ((foSzam * 2) + " db tojás");
-                document.getElementById("cukor").innerHTML = ((foSzam * 1) + " ek kristálycukor");
 
 
+            document.getElementById("tej").innerHTML = ((foSzam * 0.2).toFixed(2) + " l tej");
+            document.getElementById("tojas").innerHTML = ((foSzam * 2) + " db tojás");
+            document.getElementById("cukor").innerHTML = ((foSzam * 1) + " ek kristálycukor");
 
-            }
+
+
+
 
         }
 

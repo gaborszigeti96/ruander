@@ -1,7 +1,7 @@
 function kalkulal() {
     //Űrlapadatok
-    const szelesseg = getElementById('szelesseg');
-    const magassag = getElementById('magassag');
+    const szelesseg = document.getElementById('szelesseg').value;
+    const magassag = document.getElementById('magassag').value;
     const papir = document.getElementById('papirtipus').value;
     //Számítások
     let terulet = Math.round((szelesseg * magassag) / 10000);

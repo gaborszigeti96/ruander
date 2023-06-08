@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halmazállapot </title>
+    <style>
+        #jeg {
+            width: 300px;
+            display: none;
+        }
+
+        #viz {
+            width: 300px;
+            display: none;
+        }
+
+        #goz {
+            width: 300px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="range" id="allapot">
+    <p id="rangeErtek"></p>
+    <img src="ice.jpg" alt="jeg" id="jeg">
+    <img src="water.jpg" alt="viz" id="viz">
+    <img src="steam.jpg" alt="goz" id="goz">
+
+    <script>
+        allapot.addEventListener("change", allapotValtozas);
+        function allapotValtozas() {
+            let csuszka = document.querySelector("#allapot").value
+
+            if (csuszka < 33) {
+                document.querySelector("#jeg").style.display = "block"
+                document.querySelector("#viz").style.display = "none"
+                document.querySelector("#goz").style.display = "none"
+            }
+
+            else if (csuszka > 33 && csuszka < 66) {
+                document.querySelector("#jeg").style.display = "none"
+                document.querySelector("#goz").style.display = "none"
+                document.querySelector("#viz").style.display = "block"
+            }
+
+            else {
+                document.querySelector("#jeg").style.display = "none"
+                document.querySelector("#viz").style.display = "none"
+                document.querySelector("#goz").style.display = "block"
+            }
+
+        }
+    </script>
+</body>
+
+
+
+</html>

@@ -3,17 +3,26 @@ h1 {
     text-decoration: underline;
     font-size: 30px;
     margin-bottom: 20px;
+    /*
+text-align:center;
+*/
 }
 
 p {
     text-align: justify;
 }
 
+/*
+img helyett lehet az auto szelektort is formázni  -- tanárbácsi megjegyzése
+*/
 img {
     width: 250px;
 }
 
 .kiemelt {
+    /* .kiemeltből kettő van :D
+    color: red
+    */
     font-weight: bold;
 }
 

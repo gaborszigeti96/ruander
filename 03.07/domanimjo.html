@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom anim</title>
+    <style>
+        @keyframes LenyilasAnimacio {
+            from {
+                height: 100px;
+            }
+
+            to {
+                height: 400px;
+            }
+
+        }
+
+        @keyframes BezarasAnimacio {
+            from {
+                height: 400px;
+            }
+
+            to {
+                height: 100px;
+            }
+
+        }
+
+        #megjelenitendoElem {
+            height: 400px;
+            width: 200px;
+            margin: 0px auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 2px 2px 5px black;
+            display: block;
+            animation-name: semmi;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="allapotGomb">Gomb</button>
+    <div id="megjelenitendoElem"></div>
+
+    <script>
+
+        allapotGomb.addEventListener("click", elemLathatosag);
+        function elemLathatosag() {
+            let allapot = document.querySelector("#megjelenitendoElem").style.animationName;
+
+            if (allapot != "LenyilasAnimacio") {
+                document.querySelector("#megjelenitendoElem").style.animationName = "LenyilasAnimacio";
+            }
+
+            else {
+                document.querySelector("#megjelenitendoElem").style.animationName = "BezarasAnimacio";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

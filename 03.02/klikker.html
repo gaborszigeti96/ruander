@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>klikker</title>
+    <style>
+        #ugraloFelirat {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100px;
+            padding: 30px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ugraloFelirat">Kattints ide!
+
+    </div>
+    <script>
+
+        ugraloFelirat.addEventListener("click", ugras)
+
+        function ugras() {
+            let randomTopErtek = (Math.random() * 768);
+            let randomLeftErtek = (Math.random() * 1024);
+
+            let elem = document.querySelector("#ugraloFelirat");
+            elem.style.top = randomTopErtek + "px";
+            elem.style.left = randomLeftErtek + "px";
+        }
+
+    </script>
+
+</body>
+
+</html>
